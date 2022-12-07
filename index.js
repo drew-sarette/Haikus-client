@@ -68,7 +68,7 @@ currentWordInput.addEventListener("keydown", function (ev) {
 
 //connects to server to get the syllables/synonyms of the word to be added or changed
 async function lookUp(word) {
-    const endpoint = new URL(`https://Haikus-server.drew-sarette.repl.co/${word}`);
+    const endpoint = new URL(`https://Haiku-Dictionary-API.drew-sarette.repl.co/words/${word}`);
     const response = await fetch(endpoint);
     const result = await response.json();
     return result.data;
